@@ -1,0 +1,30 @@
+<!-- want to extend base -->
+{% extends '_partials/base.html' %}
+
+{% block title %}
+    Create Todo      
+{% endblock %}
+
+<!-- to load static file -->
+{% load static %}
+
+{% block content %}
+
+
+    <h3>Create Todo</h3>
+
+    {% include '_partials/messages.html' %}
+
+    <form class="ui form" method="POST" action={% url 'create-todo' %}>
+        {% csrf_token %}
+
+        <!-- displaying dynamic context -->
+        {{ form.as_p }}
+
+        <input type="submit" class="ui button primary" value="Submit">
+    </form>
+
+
+
+    
+    {% endblock content %}
