@@ -27,3 +27,6 @@ run - pip freeze > requirements.txt
 
 modify github file pthon-app.yml
 to let hithub know abt our environment variable in github go to project and click on settings and setup secrets
+
+need to tell github to install postgress and use for our app to work smoothly
+need to add services for this and add postgres (configure)
