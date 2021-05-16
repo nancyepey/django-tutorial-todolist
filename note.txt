@@ -19,3 +19,23 @@ is SECRET_KEY is empty they do source .env
 #run - python manage.py createsuperuser
 username - nancytruly
 email - manudev02370@gmail.com
+
+
+for test in github
+creating a requirements.txt file
+run - pip freeze > requirements.txt
+
+modify github file pthon-app.yml
+to let hithub know abt our environment variable in github go to project and click on settings and setup secrets
+
+need to tell github to install postgress and use for our app to work smoothly
+need to add services for this and add postgres (configure)
+
+adding a coverage, it should failed if certain test failed
+the below much reach 95 if not its considered as failure
+coverage run manage.py test && coverage report --fail-under=95
+
+simply way to check
+python manage.py test
+
+coverage reporting tool: codecov (beautiful colors)
