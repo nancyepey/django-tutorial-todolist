@@ -14,6 +14,7 @@ from pathlib import Path
 #
 import os
 import sys
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -155,21 +156,25 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 #
-# EMAIL_FROM_USER = 'manudev02370@gmail.com'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'manudev02370@gmail.com'
-# EMAIL_HOST_PASSWORD = 'formanudevprogress'
-# EMAIL_USE_TLS = True
-# EMAIL_PORT = 587
+
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# the above is for heruko to save all the static file
+# install django heroku pip install django-heroku and gunicorn pip install gunicorn
+# after installing the above freeze in new dependencies
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'todosite/static')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+django_heroku.settings(locals())
+
