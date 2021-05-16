@@ -19,3 +19,11 @@ is SECRET_KEY is empty they do source .env
 #run - python manage.py createsuperuser
 username - nancytruly
 email - manudev02370@gmail.com
+
+
+for test in github
+creating a requirements.txt file
+run - pip freeze > requirements.txt
+
+modify github file pthon-app.yml
+to let hithub know abt our environment variable in github go to project and click on settings and setup secrets
