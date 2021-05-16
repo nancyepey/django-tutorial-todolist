@@ -54,7 +54,7 @@ jobs:
         coverage run manage.py test && coverage report --fail-under=75 && coverage xml
 
       
-        - name: Report coverage to codecov
+    - name: Report coverage to codecov
       env: 
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
         DB_NAME: ${{ secrets.DB_NAME }}
