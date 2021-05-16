@@ -30,3 +30,12 @@ to let hithub know abt our environment variable in github go to project and clic
 
 need to tell github to install postgress and use for our app to work smoothly
 need to add services for this and add postgres (configure)
+
+adding a coverage, it should failed if certain test failed
+the below much reach 95 if not its considered as failure
+coverage run manage.py test && coverage report --fail-under=95
+
+simply way to check
+python manage.py test
+
+coverage reporting tool: codecov (beautiful colors)
